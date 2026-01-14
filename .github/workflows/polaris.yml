@@ -22,8 +22,11 @@ jobs:
       with:
         polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
         polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
-        polaris_assessment_types: 'SAST,SCA'
+        polaris_assessment_types: 'SAST'
+        polaris_test_sast_type: 'SAST-FULL'
+        polaris_test_sast_location: 'local'
         polaris_application_name: pkumarb-github
+        polaris_project_name: local-scan
         polaris_prComment_enabled: 'true'
         polaris_reports_sarif_create: 'true'
         polaris_upload_sarif_report: 'true'
